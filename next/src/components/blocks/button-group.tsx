@@ -1,10 +1,11 @@
 import { Button } from "@nextui-org/react";
 import clsx from "clsx";
 import Link from "next/link";
+import React from "react";
 
 import { BlockButton, BlockButtonGroup, Page, Post } from "@/types";
 
-export default function ButtonGroup(props: BlockButtonGroup) {
+export default function ButtonGroup(props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & BlockButtonGroup) {
   if (props.buttons && props.buttons.length < 1) return null;
   function getUrl(button: BlockButton): string | undefined {
     switch (button.type) {

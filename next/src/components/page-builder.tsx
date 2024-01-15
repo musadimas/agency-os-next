@@ -5,18 +5,18 @@ import { Block } from "@/components";
 
 const componentMap: Record<BlockType, any> = {
   block_hero: Block["Hero"],
-  block_faqs: Block["Hero"],
-  block_richtext: Block["Hero"],
+  block_faqs: Block["Faqs"],
+  block_richtext: Block["Richtext"],
   block_testimonials: Block["Hero"],
-  block_quote: Block["Hero"],
+  block_quote: Block["Quote"],
   block_cta: Block["Hero"],
   block_form: Block["Hero"],
   block_logocloud: Block["Hero"],
   block_team: Block["Hero"],
   block_html: Block["Hero"],
-  block_video: Block["Hero"],
+  block_video: Block["Video"],
   block_gallery: Block["Hero"],
-  block_steps: Block["Hero"],
+  block_steps: Block["Steps"],
   block_columns: Block["Hero"],
   block_divider: Block["Hero"],
 };
@@ -34,7 +34,7 @@ export function PageBuilder(props: PageBuilderProps) {
   return (
     <>
       {filteredBlocks?.map((block) => {
-        if (!block.collection || block.collection !== "block_hero") return;
+        if (!block.collection) return;
         const Element = componentMap[block.collection];
 
         return <Element key={block.id} {...block.item} />;

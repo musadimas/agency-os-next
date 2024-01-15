@@ -12,21 +12,23 @@
   --font-code: "Fira Code";
   --font-signature: "Nothing You Could Do";
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+html {
+  min-width: 375px;
+}
+
+.steps-animation .path {
+  stroke-dasharray: 1, 30;
+  -webkit-animation: dash 5s linear both infinite;
+  animation: dash 5s linear both infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -15rem;
+  }
+}
