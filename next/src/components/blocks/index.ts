@@ -6,6 +6,11 @@ import Quote from "./quote";
 import Faqs from "./faqs";
 import Video from "./video";
 import Steps from "./steps";
+import Gallery from "./gallery";
+import LogoCloud from "./logo-cloud";
+import Form from "./form";
+import Team from "./team";
+import Column from "./column";
 
 export const Block = {
   Container,
@@ -16,4 +21,9 @@ export const Block = {
   Faqs,
   Video,
   Steps,
+  Gallery,
+  LogoCloud,
+  Form,
+  Team,
+  Column,
 };
