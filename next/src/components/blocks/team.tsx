@@ -93,7 +93,7 @@ export default function Team(props: BlockTeam) {
   //     return `${colHeight.value * 15}ms`;
   //   });
   return (
-    <section>
+    <section id={props.id}>
       <Block.Container>
         <div className='flex flex-col mx-auto lg:flex-row'>
           <div className='flex flex-col pr-4 lg:w-3/5'>

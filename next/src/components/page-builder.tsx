@@ -1,7 +1,7 @@
 import React from "react";
 
-import { BlockType, Page, PageBlock } from "@/types";
-import { Block } from "@/components";
+import { BlockType, Navigation as INav, Page, PageBlock } from "@/types";
+import { Block, Navigation } from "@/components";
 
 const componentMap: Record<BlockType, any> = {
   block_hero: Block["Hero"],
@@ -23,6 +23,7 @@ const componentMap: Record<BlockType, any> = {
 
 type PageBuilderProps = {
   page: Page;
+  nav?: INav;
 };
 
 export function PageBuilder(props: PageBuilderProps) {
@@ -30,9 +31,11 @@ export function PageBuilder(props: PageBuilderProps) {
   const filteredBlocks = blocks?.filter((block) => {
     return block.hide_block !== true;
   });
+  // console.log(props.nav);
 
   return (
     <>
+      <Navigation.Header data={props.nav} />
       {filteredBlocks?.map((block) => {
         if (!block.collection) return;
         const Element = componentMap[block.collection];

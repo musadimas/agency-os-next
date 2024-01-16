@@ -7,6 +7,6 @@ export interface BlockHero {
   headline?: string | null;
   content?: string | null;
   image?: (string | File) | null;
-  image_position?: "left" | "right" | null;
+  image_position?: "left" | "right" | "background" | null;
   button_group?: (string | BlockButtonGroup) | null;
 }

@@ -1,14 +1,16 @@
-import type { Post, Page } from "../content";
+import { ButtonProps } from "@nextui-org/react";
+import type { Post, Page, PageBlock } from "../content";
 
 export interface BlockButton {
   id: string;
   sort: number | null;
-  type: ("pages" | "posts" | "external") | null;
+  type: ("pages" | "posts" | "external" | "sections") | null;
   label: string | null;
-  color: "primary" | "white" | "gray" | "white" | "black";
-  variant: "solid" | "outline" | "ghost" | "link" | "soft";
+  color: ButtonProps["color"];
+  variant: ButtonProps["variant"];
   page: string | Page | null;
   post: string | Post | null;
   external_url: string | null;
+  section: string | PageBlock | null;
   icon: string | null;
 }

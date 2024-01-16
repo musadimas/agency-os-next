@@ -12,7 +12,7 @@ export default function Steps(props: BlockStep) {
   const { fileUrl } = useFiles();
 
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       {props.title && <Typography.Title>{props.title}</Typography.Title>}
       {props.headline && <Typography.Headline content={props.headline} size='lg' />}
       <div className='mt-8'>

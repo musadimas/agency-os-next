@@ -5,7 +5,7 @@ import { Block, Typography } from "@/components";
 
 export default function Richtext(props: BlockRichtext) {
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       <div
         className={clsx({
           "text-left": props.alignment === "left",

@@ -36,7 +36,7 @@ export async function getPage(path: string) {
               "hide_block",
               {
                 item: {
-                  block_hero: ["id", "title", "headline", "content", "image", "image_position", { button_group: ["*", { buttons: ["*", { page: ["permalink"], post: ["slug"] }] }] }],
+                  block_hero: ["id", "title", "headline", "content", "image", "image_position", { button_group: ["*", { buttons: ["*", { section: ["*"], page: ["permalink"], post: ["slug"] }] }] }],
                   block_faqs: ["id", "title", "faqs", "headline", "alignment"],
                   block_richtext: ["id", "title", "headline", "content", "alignment"],
                   block_testimonials: [
@@ -62,7 +62,14 @@ export async function getPage(path: string) {
                       button_group: [
                         "*",
                         {
-                          buttons: ["*", { page: ["permalink"], post: ["slug"] }],
+                          buttons: [
+                            "*",
+                            {
+                              section: ["*"],
+                              page: ["permalink"],
+                              post: ["slug"],
+                            },
+                          ],
                         },
                       ],
                     },
@@ -109,7 +116,7 @@ export async function getPage(path: string) {
                           button_group: [
                             "*",
                             {
-                              buttons: ["*", { page: ["permalink"], post: ["slug"] }],
+                              buttons: ["*", { section: ["*"], page: ["permalink"], post: ["slug"] }],
                             },
                           ],
                         },
@@ -131,7 +138,7 @@ export async function getPage(path: string) {
                           button_group: [
                             "*",
                             {
-                              buttons: ["*", { page: ["permalink"], post: ["slug"] }],
+                              buttons: ["*", { section: ["*"], page: ["permalink"], post: ["slug"] }],
                             },
                           ],
                         },

@@ -9,7 +9,7 @@ import { useFiles } from "@/hooks";
 export default function Column(props: BlockColumn) {
   const { fileUrl } = useFiles();
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       {props.title && <Typography.Title>{props.title}</Typography.Title>}
       {props.headline && <Typography.Headline content={props.headline} />}
       <div className='mt-12 space-y-16'>
@@ -19,7 +19,6 @@ export default function Column(props: BlockColumn) {
               {row.title && <Typography.Title>{row.title}</Typography.Title>}
               {row.headline && <Typography.Headline content={row.headline} />}
               {row.content && <Typography.Prose content={row.content} className='mt-4' />}
-
               {row.button_group && <Block.ButtonGroup {...(row.button_group as BlockButtonGroup)} className='mt-4' />}
             </div>
             <div

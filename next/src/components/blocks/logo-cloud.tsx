@@ -9,7 +9,7 @@ import { useFiles } from "@/hooks";
 export default function LogoCloud(props: BlockLogocloud) {
   const { fileUrl } = useFiles();
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       {props.title && <Typography.Title>{props?.title}</Typography.Title>}
       {props.headline && <Typography.Headline content={props.headline} size='lg' />}
       <div className='flow-root mt-8 lg:mt-10'>

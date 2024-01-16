@@ -7,7 +7,7 @@ export default function Gallery(props: BlockGallery) {
     return item.directus_files_id as File;
   });
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       {props.title && <Typography.Title>{props.title}</Typography.Title>}
       {props.headline && <Typography.Headline content={props.headline} size='lg' />}
       {galleryItems && galleryItems.length > 0 && <Base.Gallery items={galleryItems} />}

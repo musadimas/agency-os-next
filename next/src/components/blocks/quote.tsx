@@ -12,7 +12,7 @@ export default function Quote(props: BlockQuote) {
   console.log(ref?.current);
 
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       {props.content && (
         <div
           ref={ref}

@@ -20,7 +20,7 @@ export default function Video(props: BlockVideo) {
   if (!props) return null;
 
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       {props.title && <Typography.Title>{props.title}</Typography.Title>}
       {props.headline && <Typography.Headline content={props.headline} size='lg' />}
       <iframe className='w-full aspect-video' loading='lazy' src={generateVideoEmbed(url() ?? "")} allow='autoplay; fullscreen; picture-in-picture' allowFullScreen title={props.title ?? ""}></iframe>

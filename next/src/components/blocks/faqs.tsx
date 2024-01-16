@@ -21,7 +21,7 @@ export default function Faqs(props: BlockFaq) {
   //     });
   // });
   return (
-    <Block.Container>
+    <Block.Container id={props.id}>
       <div
         className={clsx({
           "mx-auto max-w-3xl": props.alignment === "center",
